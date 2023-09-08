@@ -11,7 +11,7 @@ data = {
     'wd': '北京'
 }
 response = requests.get(url,params=data,headers=headers)
-# response.encoding = 'utf-8'
+
 content = response.text
 
 print(content)
