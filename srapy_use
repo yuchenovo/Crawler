@@ -1,0 +1,20 @@
+1.创建工程
+scrapy startproject 项目名字
+
+2.初始化工程 在spider目录下
+scrapy genspider 爬虫名称 网址
+
+3.运行爬虫
+scrapy crawl 爬虫名称
+
+attention:
+    settings.py:
+        要关闭robots协议
+        要开启管道，先注释掉相关代码
+        多管道要先声明 并且给予优先级
+    items.py:
+        在这里声明字段，构造函数创建对象
+    spider.py:
+        start_urls中不能以.html结尾
+        yield 获取对象返回给管道进行下载
+        再次调用爬虫 yield scrapy.Request(url=url,callback=self.parse)
