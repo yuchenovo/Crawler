@@ -7,6 +7,11 @@ scrapy genspider 爬虫名称 网址
 3.运行爬虫
 scrapy crawl 爬虫名称
 
+4.post请求
+start_requests 替代parse
+
+
+
 attention:
     settings.py:
         要关闭robots协议
